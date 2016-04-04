@@ -22,6 +22,8 @@
 		5CEB93A11C6D7B52008B31BB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5CEB93A01C6D7B52008B31BB /* Podfile */; };
 		5CEB93A91C6DAAF7008B31BB /* NSDictionary+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB93A81C6DAAF7008B31BB /* NSDictionary+Json.m */; };
 		B75EC51A40FDB59AFBE20C09 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AF6E61D782A3CCE2F1FEFA /* libPods.a */; };
+		CCD4A99E1CB2C57900E51585 /* SubCategory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD4A99B1CB2C57900E51585 /* SubCategory+CoreDataProperties.m */; };
+		CCD4A99F1CB2C57900E51585 /* SubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD4A99D1CB2C57900E51585 /* SubCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,11 @@
 		6659CBAEC0980282BD1A70FC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7BE6868A0AA7787E2F8269FE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		94AF6E61D782A3CCE2F1FEFA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCD4A98D1CB2C2F200E51585 /* Expense 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Expense 6.xcdatamodel"; sourceTree = "<group>"; };
+		CCD4A99A1CB2C57900E51585 /* SubCategory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SubCategory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		CCD4A99B1CB2C57900E51585 /* SubCategory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SubCategory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		CCD4A99C1CB2C57900E51585 /* SubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCategory.h; sourceTree = "<group>"; };
+		CCD4A99D1CB2C57900E51585 /* SubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +136,10 @@
 		5C3B327B1C65DEA6004DAF8E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CCD4A99A1CB2C57900E51585 /* SubCategory+CoreDataProperties.h */,
+				CCD4A99B1CB2C57900E51585 /* SubCategory+CoreDataProperties.m */,
+				CCD4A99C1CB2C57900E51585 /* SubCategory.h */,
+				CCD4A99D1CB2C57900E51585 /* SubCategory.m */,
 				5CD70C741CB2C153008DDC44 /* Transaction+CoreDataProperties.h */,
 				5CD70C751CB2C153008DDC44 /* Transaction+CoreDataProperties.m */,
 				5CD70C761CB2C153008DDC44 /* Transaction.h */,
@@ -288,9 +299,11 @@
 				5C3B32631C65DDE4004DAF8E /* ViewController.m in Sources */,
 				5C3B32601C65DDE4004DAF8E /* AppDelegate.m in Sources */,
 				5C3B325D1C65DDE3004DAF8E /* main.m in Sources */,
+				CCD4A99F1CB2C57900E51585 /* SubCategory.m in Sources */,
 				5CD70C7E1CB2C153008DDC44 /* Category+CoreDataProperties.m in Sources */,
 				5C3B327E1C66E807004DAF8E /* Constants.m in Sources */,
 				5CD70C7F1CB2C153008DDC44 /* Category.m in Sources */,
+				CCD4A99E1CB2C57900E51585 /* SubCategory+CoreDataProperties.m in Sources */,
 				5CD70C7C1CB2C153008DDC44 /* Transaction+CoreDataProperties.m in Sources */,
 				5CD70C7D1CB2C153008DDC44 /* Transaction.m in Sources */,
 				5CEB93A91C6DAAF7008B31BB /* NSDictionary+Json.m in Sources */,
@@ -464,13 +477,14 @@
 		5C3B32671C65DDE6004DAF8E /* Expense.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				CCD4A98D1CB2C2F200E51585 /* Expense 6.xcdatamodel */,
 				5CD70C731CB2C06F008DDC44 /* Expense 5.xcdatamodel */,
 				5CD70C6C1CB28C09008DDC44 /* Expense 4.xcdatamodel */,
 				5CEB93AA1C6ED38A008B31BB /* Expense 3.xcdatamodel */,
 				5CEB93401C6D6FE0008B31BB /* Expense 2.xcdatamodel */,
 				5C3B32681C65DDE6004DAF8E /* Expense.xcdatamodel */,
 			);
-			currentVersion = 5CD70C731CB2C06F008DDC44 /* Expense 5.xcdatamodel */;
+			currentVersion = CCD4A98D1CB2C2F200E51585 /* Expense 6.xcdatamodel */;
 			path = Expense.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
