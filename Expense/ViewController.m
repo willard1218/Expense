@@ -19,10 +19,10 @@
   [super viewDidLoad];
 
   Transaction *transaction = [Transaction MR_createEntity];
-  transaction.name = @"看電影";
+  //transaction.name = @"看電影";
   transaction.cost = @300;
   transaction.note = @"威秀";
-  transaction.category = @(CategoryOutcomeTypeMovie);
+  transaction.subCategory = @(CategoryOutcomeTypeMovie);
 
   transaction.type = [[NSNumber alloc] initWithInteger:TransactionTypeOutcome];
 

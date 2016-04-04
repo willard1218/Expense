@@ -13,13 +13,13 @@
 
 @implementation Transaction (CoreDataProperties)
 
-@dynamic category;
+@dynamic subCategory;
 @dynamic cost;
 @dynamic createdAt;
 @dynamic name;
 @dynamic note;
 @dynamic type;
-@dynamic userAccount;
+@dynamic hasDeleted;
 @dynamic updatedAt;
 
 @end

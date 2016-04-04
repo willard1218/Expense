@@ -15,8 +15,10 @@
 		5C3B326B1C65DDE7004DAF8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C3B326A1C65DDE7004DAF8E /* Assets.xcassets */; };
 		5C3B326E1C65DDE7004DAF8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C3B326C1C65DDE7004DAF8E /* LaunchScreen.storyboard */; };
 		5C3B327E1C66E807004DAF8E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3B327D1C66E807004DAF8E /* Constants.m */; };
-		5CD70C711CB28C78008DDC44 /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD70C6E1CB28C78008DDC44 /* Transaction+CoreDataProperties.m */; };
-		5CD70C721CB28C78008DDC44 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD70C701CB28C78008DDC44 /* Transaction.m */; };
+		5CD70C7C1CB2C153008DDC44 /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD70C751CB2C153008DDC44 /* Transaction+CoreDataProperties.m */; };
+		5CD70C7D1CB2C153008DDC44 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD70C771CB2C153008DDC44 /* Transaction.m */; };
+		5CD70C7E1CB2C153008DDC44 /* Category+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD70C791CB2C153008DDC44 /* Category+CoreDataProperties.m */; };
+		5CD70C7F1CB2C153008DDC44 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD70C7B1CB2C153008DDC44 /* Category.m */; };
 		5CEB93A11C6D7B52008B31BB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5CEB93A01C6D7B52008B31BB /* Podfile */; };
 		5CEB93A91C6DAAF7008B31BB /* NSDictionary+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB93A81C6DAAF7008B31BB /* NSDictionary+Json.m */; };
 		B75EC51A40FDB59AFBE20C09 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AF6E61D782A3CCE2F1FEFA /* libPods.a */; };
@@ -37,10 +39,15 @@
 		5C3B327C1C66E807004DAF8E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5C3B327D1C66E807004DAF8E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		5CD70C6C1CB28C09008DDC44 /* Expense 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Expense 4.xcdatamodel"; sourceTree = "<group>"; };
-		5CD70C6D1CB28C78008DDC44 /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Transaction+CoreDataProperties.h"; path = "../Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
-		5CD70C6E1CB28C78008DDC44 /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Transaction+CoreDataProperties.m"; path = "../Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
-		5CD70C6F1CB28C78008DDC44 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transaction.h; path = ../Transaction.h; sourceTree = "<group>"; };
-		5CD70C701CB28C78008DDC44 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Transaction.m; path = ../Transaction.m; sourceTree = "<group>"; };
+		5CD70C731CB2C06F008DDC44 /* Expense 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Expense 5.xcdatamodel"; sourceTree = "<group>"; };
+		5CD70C741CB2C153008DDC44 /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5CD70C751CB2C153008DDC44 /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5CD70C761CB2C153008DDC44 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		5CD70C771CB2C153008DDC44 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		5CD70C781CB2C153008DDC44 /* Category+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Category+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5CD70C791CB2C153008DDC44 /* Category+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Category+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5CD70C7A1CB2C153008DDC44 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		5CD70C7B1CB2C153008DDC44 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		5CEB93401C6D6FE0008B31BB /* Expense 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Expense 2.xcdatamodel"; sourceTree = "<group>"; };
 		5CEB93A01C6D7B52008B31BB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5CEB93A31C6D7F8C008B31BB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
@@ -122,10 +129,14 @@
 		5C3B327B1C65DEA6004DAF8E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5CD70C6D1CB28C78008DDC44 /* Transaction+CoreDataProperties.h */,
-				5CD70C6E1CB28C78008DDC44 /* Transaction+CoreDataProperties.m */,
-				5CD70C6F1CB28C78008DDC44 /* Transaction.h */,
-				5CD70C701CB28C78008DDC44 /* Transaction.m */,
+				5CD70C741CB2C153008DDC44 /* Transaction+CoreDataProperties.h */,
+				5CD70C751CB2C153008DDC44 /* Transaction+CoreDataProperties.m */,
+				5CD70C761CB2C153008DDC44 /* Transaction.h */,
+				5CD70C771CB2C153008DDC44 /* Transaction.m */,
+				5CD70C781CB2C153008DDC44 /* Category+CoreDataProperties.h */,
+				5CD70C791CB2C153008DDC44 /* Category+CoreDataProperties.m */,
+				5CD70C7A1CB2C153008DDC44 /* Category.h */,
+				5CD70C7B1CB2C153008DDC44 /* Category.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -277,9 +288,11 @@
 				5C3B32631C65DDE4004DAF8E /* ViewController.m in Sources */,
 				5C3B32601C65DDE4004DAF8E /* AppDelegate.m in Sources */,
 				5C3B325D1C65DDE3004DAF8E /* main.m in Sources */,
+				5CD70C7E1CB2C153008DDC44 /* Category+CoreDataProperties.m in Sources */,
 				5C3B327E1C66E807004DAF8E /* Constants.m in Sources */,
-				5CD70C711CB28C78008DDC44 /* Transaction+CoreDataProperties.m in Sources */,
-				5CD70C721CB28C78008DDC44 /* Transaction.m in Sources */,
+				5CD70C7F1CB2C153008DDC44 /* Category.m in Sources */,
+				5CD70C7C1CB2C153008DDC44 /* Transaction+CoreDataProperties.m in Sources */,
+				5CD70C7D1CB2C153008DDC44 /* Transaction.m in Sources */,
 				5CEB93A91C6DAAF7008B31BB /* NSDictionary+Json.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,12 +464,13 @@
 		5C3B32671C65DDE6004DAF8E /* Expense.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				5CD70C731CB2C06F008DDC44 /* Expense 5.xcdatamodel */,
 				5CD70C6C1CB28C09008DDC44 /* Expense 4.xcdatamodel */,
 				5CEB93AA1C6ED38A008B31BB /* Expense 3.xcdatamodel */,
 				5CEB93401C6D6FE0008B31BB /* Expense 2.xcdatamodel */,
 				5C3B32681C65DDE6004DAF8E /* Expense.xcdatamodel */,
 			);
-			currentVersion = 5CEB93AA1C6ED38A008B31BB /* Expense 3.xcdatamodel */;
+			currentVersion = 5CD70C731CB2C06F008DDC44 /* Expense 5.xcdatamodel */;
 			path = Expense.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
