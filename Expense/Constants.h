@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-//Diana
+//Diana love 菜
 @interface Constants : NSObject
 
 typedef NS_ENUM(NSInteger, CategoryIncomeType) {
