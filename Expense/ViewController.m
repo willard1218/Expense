@@ -37,8 +37,8 @@
   NSDate *date = [formatter dateFromString:dateString];
 
   transaction.createdAt = date;
-  NSDictionary *dict = [transaction DictionaryValue];
-  NSLog(@"%@", [dict JsonString]);
+  //NSDictionary *dict = [transaction DictionaryValue];
+  //NSLog(@"%@", [dict JsonString]);
 
   [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 
@@ -46,7 +46,7 @@
   a[100];
   [a enumerateObjectsUsingBlock:^(Transaction *obj, NSUInteger idx,
                                   BOOL *_Nonnull stop) {
-    NSLog(@"%@", [[obj DictionaryValue] JsonString]);
+    //NSLog(@"%@", [[obj DictionaryValue] JsonString]);
 
     //[obj MR_deleteEntity];
   }];
