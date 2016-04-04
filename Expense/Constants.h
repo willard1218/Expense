@@ -19,13 +19,9 @@ typedef NS_ENUM(NSInteger, CategoryIncomeType) {
 typedef NS_ENUM(NSInteger, CategoryOutcomeType) {
   CategoryOutcomeTypeNone = 0,
   CategoryOutcomeTypeFood,
-  CategoryOutcomeTypeOil,
   CategoryOutcomeTypeTransportation,
-  CategoryOutcomeTypeParents,
-  CategoryOutcomeTypePhone,
   CategoryOutcomeTypeMovie,
   CategoryOutcomeTypeBook,
-  CategoryOutcomeTypeDailyCommodities,
   CategoryOutcomeTypeCount
 };
 
