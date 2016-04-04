@@ -43,7 +43,7 @@
   [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 
   NSArray *a = [Transaction MR_findAllSortedBy:@"createdAt" ascending:YES];
-  a[100];
+  
   [a enumerateObjectsUsingBlock:^(Transaction *obj, NSUInteger idx,
                                   BOOL *_Nonnull stop) {
     //NSLog(@"%@", [[obj DictionaryValue] JsonString]);
