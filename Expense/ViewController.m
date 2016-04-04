@@ -20,7 +20,7 @@
 
   Transaction *transaction = [Transaction MR_createEntity];
   transaction.name = @"看電影";
-  transaction.cost = [[NSNumber alloc] initWithInt:300];
+  transaction.cost = @300;
   transaction.note = @"威秀";
   transaction.category =
       [[NSNumber alloc] initWithInteger:CategoryOutcomeTypeMovie];
