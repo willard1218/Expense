@@ -22,8 +22,7 @@
   transaction.name = @"看電影";
   transaction.cost = @300;
   transaction.note = @"威秀";
-  transaction.category =
-      [[NSNumber alloc] initWithInteger:CategoryOutcomeTypeMovie];
+  transaction.category = @(CategoryOutcomeTypeMovie);
 
   transaction.type = [[NSNumber alloc] initWithInteger:TransactionTypeOutcome];
 
