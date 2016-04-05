@@ -41,7 +41,7 @@
                                name:defalutTypes[i]
                                type:@(TransactionTypeOutcome)
                               order:@(i)];
-    } // test 12ff eeg*/
+    } // test 12ff */
   }
 }
 
