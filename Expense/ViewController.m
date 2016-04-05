@@ -18,6 +18,16 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
+  [Transaction createAndSaveTransaction:@4
+                            userAccount:@"fan"
+                                   cost:@344
+                                   note:@"好吃"
+                                   type:@(TransactionTypeOutcome)
+                              createdAt:[[NSDate alloc] init]
+                              updatedAt:[[NSDate alloc] init]
+                             hasUpdated:@NO
+                             hasDeleted:@YES];
+
   Transaction *transaction = [Transaction MR_createEntity];
   // transaction.name = @"看電影";
   transaction.cost = @300;

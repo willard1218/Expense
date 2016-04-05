@@ -14,7 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Transaction : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
-
++ (void)createAndSaveTransaction:(NSNumber *)subCategory
+                     userAccount:(NSString *)userAccount
+                            cost:(NSNumber *)cost
+                            note:(NSString *)note
+                            type:(NSNumber *)type
+                       createdAt:(NSDate *)createdAt
+                       updatedAt:(NSDate *)updatedAt
+                      hasUpdated:(NSNumber *)hasUpdated
+                      hasDeleted:(NSNumber *)hasDeleted;
 @end
 
 NS_ASSUME_NONNULL_END
