@@ -14,7 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Category : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
-
++ (void)createAndSaveEntity:(NSNumber *)categoryID
+                       name:(NSString *)name
+                       type:(NSNumber *)type
+                      order:(NSNumber *)order;
 @end
 
 NS_ASSUME_NONNULL_END

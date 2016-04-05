@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Category.h"
 
 @interface AppDelegate ()
 
@@ -14,11 +15,34 @@
 
 @implementation AppDelegate
 
+- (void)setupDefalutCategory {
+  Constants *constants = [Constants getInstance];
+  NSArray *outcomeTypes = constants.kCategoryOutcomeTypes;
+  NSPredicate *outcomeTypesPredicate = [NSPredicate
+      predicateWithFormat:@"categoryID < %@ and type = %@",
+                          [outcomeTypes count], TransactionTypeOutcome];
+
+  NSArray *outcomeDefalutTypes =
+      [Category MR_findAllWithPredicate:outcomeTypesPredicate];
+
+  if ([outcomeDefalutTypes count] == 0) {
+    for (int i = 0; i < [outcomeTypes count]; i++) {
+      [Category createAndSaveEntity:@(i)
+                               name:outcomeTypes[i]
+                               type:@(TransactionTypeOutcome)
+                              order:@(i)];
+    }
+  }
+}
+
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [MagicalRecord
       setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Expense.sqlite"];
   [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelError];
+
+  //[self setupDefalutCategory];
+
   // Override point for customization after application launch.
   return YES;
 }

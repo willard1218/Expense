@@ -11,20 +11,6 @@
 //Diana love fegerg
 @interface Constants : NSObject
 
-typedef NS_ENUM(NSInteger, CategoryIncomeType) {
-  CategoryIncomeTypeNone = 0,
-  CategoryIncomeTypeSalary,
-  CategoryIncomeTypeCount
-};
-
-typedef NS_ENUM(NSInteger, CategoryOutcomeType) {
-  CategoryOutcomeTypeNone = 0,
-  CategoryOutcomeTypeFood,
-  CategoryOutcomeTypeTransportation,
-  CategoryOutcomeTypeMovie,
-  CategoryOutcomeTypeBook,
-  CategoryOutcomeTypeCount
-};
 
 typedef NS_ENUM(NSInteger, TransactionType) {
   TransactionTypeNone = 0,
@@ -43,9 +29,6 @@ typedef NS_ENUM(NSInteger, TransactionType) {
 
 - (void)initConstants;
 + (Constants *)getInstance;
-- (NSString *)GetCategoryIncomeType:(NSNumber *)idx;
 
-- (NSString *)GetCategoryOutcomeType:(NSNumber *)idx;
-- (NSString *)GetTransactionType:(NSNumber *)idx;
 
 @end

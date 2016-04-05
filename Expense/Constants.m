@@ -30,67 +30,22 @@ static Constants *instance = nil;
   return instance;
 }
 
-- (NSString *)GetCategoryIncomeType:(NSNumber *)idx {
-  @try {
-    return [_kCategoryIncomeTypes objectAtIndex:[idx intValue] - 1];
-  } @catch (NSException *e) {
-    NSLog(@"access _kCategoryIncomeTypes out of range");
-    exit(EXIT_FAILURE);
-  }
-}
-
-- (NSString *)GetCategoryOutcomeType:(NSNumber *)idx {
-  @try {
-    return [_kCategoryOutcomeTypes objectAtIndex:[idx intValue] - 1];
-  } @catch (NSException *e) {
-    NSLog(@"access _kCategoryOutcomeTypes out of range");
-    exit(EXIT_FAILURE);
-  }
-}
-- (NSString *)GetTransactionType:(NSNumber *)idx {
-  @try {
-    return [_kTransactionTypes objectAtIndex:[idx intValue] - 1];
-  } @catch (NSException *e) {
-    NSLog(@"access _kTransactionTypes out of range");
-    exit(EXIT_FAILURE);
-  }
-}
-
 - (void)initConstants {
   _kCategoryOutcomeTypes = @[
     @"Food",
     @"Clothing",
-    @"Accommodation,
+    @"Accommodation",
     @"Transportation",
-    @"Education,
+    @"Education",
     @"Entertainment"
   ];
 
   _kCategoryIncomeTypes = @[ @"Salary", @"ExtraIncome" ];
 
   _kTransactionTypes = @[ @"income", @"outcome" ];
-  @try {
-    Boolean countMatched =
-        [_kCategoryIncomeTypes count] == CategoryIncomeTypeCount - 1 &&
-        [_kCategoryOutcomeTypes count] == CategoryOutcomeTypeCount - 1 &&
-        [_kTransactionTypes count] == TransactionTypeCount - 1;
-
-    if (!countMatched) {
-
-      NSException *exception =
-          [NSException exceptionWithName:@"NSException"
-                                  reason:@"enum count doen't match array count"
-                                userInfo:nil];
-
-      @throw exception;
-    }
-  } @catch (NSException *exception) {
-    NSLog(@"❌ %@", exception.reason);
-    exit(EXIT_FAILURE);
-  }
 
   _kDateTimeFormatPattern = @"yyyy-MM-dd HH:mm:ss";
-  _kTransactionTypeIncome = [[NSNumber alloc] initWithInt:1];
-  _kTransactionTypeOutcome = [[NSNumber alloc] initWithInt:2];
+  _kTransactionTypeIncome = @1;
+  _kTransactionTypeOutcome = @2;
 }
 @end
