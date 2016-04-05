@@ -19,7 +19,7 @@
   Constants *constants = [Constants getInstance];
   NSArray *outcomeTypes = constants.kCategoryOutcomeTypes;
   NSPredicate *outcomeTypesPredicate = [NSPredicate
-      predicateWithFormat:@"categoryID < %@ and type = %@",
+      predicateWithFormat:@"categoryID < %d and type = %d",
                           [outcomeTypes count], TransactionTypeOutcome];
 
   NSArray *outcomeDefalutTypes =
@@ -50,7 +50,7 @@
       setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Expense.sqlite"];
   [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelError];
 
-  //[self setupDefalutCategory];
+  [self setupDefalutCategory];
 
   // Override point for customization after application launch.
   return YES;
