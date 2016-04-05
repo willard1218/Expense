@@ -16,15 +16,16 @@
         <attribute name="cost" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="hasDeleted" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasUpdated" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subCategory" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="userAccount" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Transaction" positionX="178" positionY="-63" width="128" height="165"/>
         <element name="Category" positionX="322" positionY="-45" width="128" height="103"/>
         <element name="SubCategory" positionX="475" positionY="-9" width="128" height="103"/>
+        <element name="Transaction" positionX="178" positionY="-63" width="128" height="180"/>
     </elements>
 </model>

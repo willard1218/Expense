@@ -21,7 +21,7 @@
   category.order = order;
   [category.managedObjectContext MR_saveToPersistentStoreAndWait];
 }
-// willard
+
 // Insert code here to add functionality to your managed object subclass
 
 @end

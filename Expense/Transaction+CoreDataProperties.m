@@ -2,7 +2,7 @@
 //  Transaction+CoreDataProperties.m
 //  Expense
 //
-//  Created by Willard on 2016/4/5.
+//  Created by Garrick on 2016/4/5.
 //  Copyright © 2016年  willard. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -16,10 +16,11 @@
 @dynamic cost;
 @dynamic createdAt;
 @dynamic hasDeleted;
-@dynamic name;
+@dynamic userAccount;
 @dynamic note;
 @dynamic subCategory;
 @dynamic type;
 @dynamic updatedAt;
+@dynamic hasUpdated;
 
 @end

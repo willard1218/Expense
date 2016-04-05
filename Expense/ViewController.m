@@ -15,12 +15,11 @@
 
 @implementation ViewController
 
-
 - (void)viewDidLoad {
   [super viewDidLoad];
 
   Transaction *transaction = [Transaction MR_createEntity];
-  //transaction.name = @"看電影";
+  // transaction.name = @"看電影";
   transaction.cost = @300;
   transaction.note = @"威秀";
   transaction.subCategory = @(CategoryOutcomeTypeMovie);
@@ -37,22 +36,21 @@
   NSDate *date = [formatter dateFromString:dateString];
 
   transaction.createdAt = date;
-  //NSDictionary *dict = [transaction DictionaryValue];
-  //NSLog(@"%@", [dict JsonString]);
+  // NSDictionary *dict = [transaction DictionaryValue];
+  // NSLog(@"%@", [dict JsonString]);
 
   [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 
   NSArray *a = [Transaction MR_findAllSortedBy:@"createdAt" ascending:YES];
-  
-  [a enumerateObjectsUsingBlock:^(Transaction *obj, NSUInteger idx,
-                                  BOOL *_Nonnull stop) {
-    //NSLog(@"%@", [[obj DictionaryValue] JsonString]);
 
-    //[obj MR_deleteEntity];
+  [a enumerateObjectsUsingBlock:^(Transaction *obj, NSUInteger idx,
+                                  BOOL *_Nonnull stop){
+      // NSLog(@"%@", [[obj DictionaryValue] JsonString]);
+
+      //[obj MR_deleteEntity];
   }];
 
   [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-
   // Do any additional setup after loading the view, typically from a nib.
 }
 
