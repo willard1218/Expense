@@ -59,16 +59,14 @@ static Constants *instance = nil;
 - (void)initConstants {
   _kCategoryOutcomeTypes = @[
     @"Food",
-    @"Oil",
+    @"Clothing",
+    @"Accommodation,
     @"Transportation",
-    @"Parents",
-    @"Phone",
-    @"Movie",
-    @"Book",
-    @"DailyCommodities"
+    @"Education,
+    @"Entertainment"
   ];
 
-  _kCategoryIncomeTypes = @[ @"salary" ];
+  _kCategoryIncomeTypes = @[ @"Salary", @"ExtraIncome" ];
 
   _kTransactionTypes = @[ @"income", @"outcome" ];
   @try {
