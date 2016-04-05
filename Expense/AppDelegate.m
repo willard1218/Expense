@@ -18,7 +18,7 @@
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [MagicalRecord
       setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Expense.sqlite"];
-  [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelWarn];
+  [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelError];
   // Override point for customization after application launch.
   return YES;
 }

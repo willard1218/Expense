@@ -2,7 +2,7 @@
 //  Category+CoreDataProperties.h
 //  Expense
 //
-//  Created by Willard on 2016/4/4.
+//  Created by Willard on 2016/4/5.
 //  Copyright © 2016年  willard. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -17,8 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSNumber *categoryID;
 @property (nullable, nonatomic, retain) NSString *name;
-@property (nullable, nonatomic, retain) NSNumber *type;
 @property (nullable, nonatomic, retain) NSNumber *order;
+@property (nullable, nonatomic, retain) NSNumber *type;
 
 @end
 

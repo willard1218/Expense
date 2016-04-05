@@ -2,7 +2,7 @@
 //  SubCategory+CoreDataProperties.h
 //  Expense
 //
-//  Created by Garrick on 2016/4/4.
+//  Created by Willard on 2016/4/5.
 //  Copyright © 2016年  willard. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
