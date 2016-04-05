@@ -1,3 +1,5 @@
 *.xcuserstate
 .DS_Store
 project.pbxproj
+Breakpoints_v2.xcbkptlist
+.DS_Store

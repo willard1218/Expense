@@ -26,12 +26,21 @@
       [Category MR_findAllWithPredicate:outcomeTypesPredicate];
 
   if ([outcomeDefalutTypes count] == 0) {
-    for (int i = 0; i < [outcomeTypes count]; i++) {
-      [Category createAndSaveEntity:@(i)
-                               name:outcomeTypes[i]
-                               type:@(TransactionTypeOutcome)
-                              order:@(i)];
-    }
+
+    [outcomeTypes
+        enumerateObjectsUsingBlock:^(NSString *outcomeType, NSUInteger i,
+                                     BOOL *_Nonnull stop) {
+          [Category createAndSaveEntity:@(i)
+                                   name:outcomeType
+                                   type:@(TransactionTypeOutcome)
+                                  order:@(i)];
+        }];
+    //    for (int i = 0; i < [outcomeTypes count]; i++) {
+    //      [Category createAndSaveEntity:@(i)
+    //                               name:outcomeTypes[i]
+    //                               type:@(TransactionTypeOutcome)
+    //                              order:@(i)];
+    //    }
   }
 }
 
