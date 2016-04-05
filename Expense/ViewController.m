@@ -49,7 +49,7 @@
   // NSDictionary *dict = [transaction DictionaryValue];
   // NSLog(@"%@", [dict JsonString]);
 
-  [Transaction saveTransaction:transaction];
+  [transaction save];
 
   [[NSManagedObjectContext MR_defaultContext]
       MR_saveToPersistentStoreAndWait]; // commit

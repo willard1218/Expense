@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
                       hasUpdated:(NSNumber *)hasUpdated
                       hasDeleted:(NSNumber *)hasDeleted;
 
-+ (void)saveTransaction:(Transaction *)transaction;
+- (void)save;
 @end
 
 NS_ASSUME_NONNULL_END
