@@ -15,32 +15,30 @@
 
 @implementation AppDelegate
 
-- (void)setupDefalutCategory {
+- (void)setupDefalutCategory:(NSUInteger)type {
   Constants *constants = [Constants getInstance];
-  NSArray *outcomeTypes = constants.kCategoryOutcomeTypes;
-  NSPredicate *outcomeTypesPredicate = [NSPredicate
-      predicateWithFormat:@"categoryID < %d and type = %d",
-                          [outcomeTypes count], TransactionTypeOutcome];
+  NSArray *types = type == 0 ? constants.kCategoryOutcomeTypes
+                             : constants.kCategoryIncomeTypes;
+  NSPredicate *typesPredicate =
+      [NSPredicate predicateWithFormat:@"categoryID < %d and type = %d",
+                                       [types count], TransactionTypeOutcome];
 
-  NSArray *outcomeDefalutTypes =
-      [Category MR_findAllWithPredicate:outcomeTypesPredicate];
+  NSArray *defalutTypes = [Category MR_findAllWithPredicate:typesPredicate];
 
-  if ([outcomeDefalutTypes count] == 0) {
-
-    [outcomeTypes
-        enumerateObjectsUsingBlock:^(NSString *outcomeType, NSUInteger i,
-                                     BOOL *_Nonnull stop) {
-          [Category createAndSaveEntity:@(i)
-                                   name:outcomeType
-                                   type:@(TransactionTypeOutcome)
-                                  order:@(i)];
-        }];
-    //    for (int i = 0; i < [outcomeTypes count]; i++) {
-    //      [Category createAndSaveEntity:@(i)
-    //                               name:outcomeTypes[i]
-    //                               type:@(TransactionTypeOutcome)
-    //                              order:@(i)];
-    //    } test 12ff eeg
+  if ([defalutTypes count] == 0) {
+    [types enumerateObjectsUsingBlock:^(NSString *typeName, NSUInteger i,
+                                        BOOL *_Nonnull stop) {
+      [Category createAndSaveEntity:@(i)
+                               name:typeName
+                               type:@(TransactionTypeOutcome)
+                              order:@(i)];
+    }];
+    /*for (int i = 0; i < [defalutTypes count]; i++) {
+      [Category createAndSaveEntity:@(i)
+                               name:defalutTypes[i]
+                               type:@(TransactionTypeOutcome)
+                              order:@(i)];
+    } // test 12ff eeg*/
   }
 }
 
@@ -50,7 +48,8 @@
       setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Expense.sqlite"];
   [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelError];
 
-  [self setupDefalutCategory];
+  [self setupDefalutCategory:0];
+  [self setupDefalutCategory:1];
 
   // Override point for customization after application launch.
   return YES;

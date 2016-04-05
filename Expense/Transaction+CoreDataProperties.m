@@ -16,11 +16,10 @@
 @dynamic cost;
 @dynamic createdAt;
 @dynamic hasDeleted;
-@dynamic userAccount;
+@dynamic hasUpdated;
 @dynamic note;
 @dynamic subCategory;
-@dynamic type;
 @dynamic updatedAt;
-@dynamic hasUpdated;
+@dynamic userAccount;
 
 @end

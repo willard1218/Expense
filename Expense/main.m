@@ -16,9 +16,9 @@ int main(int argc, char *argv[]) {
   //  }
   @autoreleasepool {
     int retVal;
-    @try { 
+    @try {
       retVal = UIApplicationMain(argc, argv, nil,
-                                 NSStringFromClass([AppDelegate class])); 
+                                 NSStringFromClass([AppDelegate class]));
     } @catch (NSException *exception) {
       NSLog(@"%@", [exception callStackSymbols]); //< ★1
       @throw exception;                           //< ★2

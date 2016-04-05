@@ -13,14 +13,13 @@
 static Constants *instance = nil;
 
 + (Constants *)getInstance {
-  @synchronized(self) {
+  /*@synchronized(self) {
     if (!instance) {
       instance = [[Constants alloc] init];
       [instance initConstants];
     }
   }
-
-  return instance;
+  return instance;*/
 
   static Constants *instance = nil;
   static dispatch_once_t onceToken;

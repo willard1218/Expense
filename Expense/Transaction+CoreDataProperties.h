@@ -18,12 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSNumber *cost;
 @property (nullable, nonatomic, retain) NSDate *createdAt;
 @property (nullable, nonatomic, retain) NSNumber *hasDeleted;
-@property (nullable, nonatomic, retain) NSString *userAccount;
+@property (nullable, nonatomic, retain) NSNumber *hasUpdated;
 @property (nullable, nonatomic, retain) NSString *note;
 @property (nullable, nonatomic, retain) NSNumber *subCategory;
-@property (nullable, nonatomic, retain) NSNumber *type;
 @property (nullable, nonatomic, retain) NSDate *updatedAt;
-@property (nullable, nonatomic, retain) NSNumber *hasUpdated;
+@property (nullable, nonatomic, retain) NSString *userAccount;
 
 @end
 

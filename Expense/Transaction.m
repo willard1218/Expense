@@ -15,7 +15,6 @@
                      userAccount:(NSString *)userAccount
                             cost:(NSNumber *)cost
                             note:(NSString *)note
-                            type:(NSNumber *)type
                        createdAt:(NSDate *)createdAt
                        updatedAt:(NSDate *)updatedAt
                       hasUpdated:(NSNumber *)hasUpdated
@@ -26,7 +25,6 @@
   transction.userAccount = userAccount;
   transction.cost = cost;
   transction.note = note;
-  transction.type = type;
   transction.createdAt = createdAt;
   transction.updatedAt = updatedAt;
   transction.hasUpdated = hasUpdated;
