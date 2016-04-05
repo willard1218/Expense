@@ -40,7 +40,7 @@
     //                               name:outcomeTypes[i]
     //                               type:@(TransactionTypeOutcome)
     //                              order:@(i)];
-    //    } test 12ff
+    //    } test 12ff eeg
   }
 }
 
