@@ -4,3 +4,16 @@ Expense.xcodeproj/project.pbxproj
 project.pbxproj
 Breakpoints_v2.xcbkptlist
 .DS_Store
+._.DS_Store
+build
+*.pbxuser
+*.perspectivev3
+*.mode1v3
+.DS_Store
+*.lock
+.svn
+UserInterfaceState.xcuserstate
+xcuserdata
+*.class
+*.swp
+.pyc

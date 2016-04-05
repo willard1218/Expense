@@ -207,7 +207,7 @@
 				TargetAttributes = {
 					5C3B32571C65DDE0004DAF8E = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = MPHREGHKGD;
+						DevelopmentTeam = 7354B4Z69H;
 					};
 				};
 			};
@@ -427,7 +427,7 @@
 				INFOPLIST_FILE = Expense/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willard.Expense6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willard.Expense0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -445,7 +445,7 @@
 				INFOPLIST_FILE = Expense/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willard.Expense6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willard.Expense0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
