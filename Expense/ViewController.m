@@ -33,7 +33,7 @@
   transaction.note = @"威秀";
   transaction.subCategory = @1;
 
-  // transaction.type = [[NSNumber alloc]
+  // transaction.type = [[NSNumber alloc] 222
   // initWithInteger:TransactionTypeOutcome];
 
   NSDate *currentDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
