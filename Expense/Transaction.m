@@ -34,4 +34,9 @@
   [transction.managedObjectContext MR_saveToPersistentStoreAndWait];
 }
 
+// Insert code here to add functionality to your managed object subclass
++ (void)saveTransaction:(Transaction *)transction {
+  [transction.managedObjectContext MR_saveToPersistentStoreAndWait];
+}
+
 @end

@@ -49,7 +49,10 @@
   // NSDictionary *dict = [transaction DictionaryValue];
   // NSLog(@"%@", [dict JsonString]);
 
-  [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+  [Transaction saveTransaction:transaction];
+
+  [[NSManagedObjectContext MR_defaultContext]
+      MR_saveToPersistentStoreAndWait]; // commit
 
   NSArray *a = [Transaction MR_findAllSortedBy:@"createdAt" ascending:YES];
 

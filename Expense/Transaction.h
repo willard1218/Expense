@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
                        updatedAt:(NSDate *)updatedAt
                       hasUpdated:(NSNumber *)hasUpdated
                       hasDeleted:(NSNumber *)hasDeleted;
+
++ (void)saveTransaction:(Transaction *)transaction;
 @end
 
 NS_ASSUME_NONNULL_END
