@@ -22,7 +22,6 @@
                             userAccount:@"fan"
                                    cost:@344
                                    note:@"好吃"
-                                   type:@(TransactionTypeOutcome)
                               createdAt:[[NSDate alloc] init]
                               updatedAt:[[NSDate alloc] init]
                              hasUpdated:@NO

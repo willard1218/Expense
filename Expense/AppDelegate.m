@@ -15,24 +15,27 @@
 
 @implementation AppDelegate
 
-- (void)setupDefalutCategory:(NSUInteger)type {
+- (void)setupDefalutCategory:(TransactionType)transaction_type {
   Constants *constants = [Constants getInstance];
-  NSArray *types = type == 0 ? constants.kCategoryOutcomeTypes
-                             : constants.kCategoryIncomeTypes;
-  NSPredicate *typesPredicate =
+  NSArray *categoryList = transaction_type == TransactionTypeIncome
+                              ? constants.kCategoryOutcomeTypes
+                              : constants.kCategoryIncomeTypes;
+
+  NSPredicate *categorysPredicate =
       [NSPredicate predicateWithFormat:@"categoryID < %d and type = %d",
-                                       [types count], TransactionTypeOutcome];
+                                       [categoryList count], transaction_type];
 
-  NSArray *defalutTypes = [Category MR_findAllWithPredicate:typesPredicate];
+  NSArray *categorys = [Category MR_findAllWithPredicate:categorysPredicate];
 
-  if ([defalutTypes count] == 0) {
-    [types enumerateObjectsUsingBlock:^(NSString *typeName, NSUInteger i,
-                                        BOOL *_Nonnull stop) {
-      [Category createAndSaveEntity:@(i)
-                               name:typeName
-                               type:@(TransactionTypeOutcome)
-                              order:@(i)];
-    }];
+  if ([categorys count] == 0) {
+    [categoryList
+        enumerateObjectsUsingBlock:^(NSString *categoryName, NSUInteger i,
+                                     BOOL *_Nonnull stop) {
+          [Category createAndSaveEntity:@(i)
+                                   name:categoryName
+                                   type:@(transaction_type)
+                                  order:@(i)];
+        }];
     /*for (int i = 0; i < [defalutTypes count]; i++) {
       [Category createAndSaveEntity:@(i)
                                name:defalutTypes[i]

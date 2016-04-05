@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
                      userAccount:(NSString *)userAccount
                             cost:(NSNumber *)cost
                             note:(NSString *)note
-                            type:(NSNumber *)type
                        createdAt:(NSDate *)createdAt
                        updatedAt:(NSDate *)updatedAt
                       hasUpdated:(NSNumber *)hasUpdated
