@@ -40,7 +40,7 @@
     //                               name:outcomeTypes[i]
     //                               type:@(TransactionTypeOutcome)
     //                              order:@(i)];
-    //    } test 123
+    //    } test 12
   }
 }
 
