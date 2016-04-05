@@ -38,10 +38,10 @@
         }];
     /*for (int i = 0; i < [defalutTypes count]; i++) {
       [Category createAndSaveEntity:@(i)
-                               name:defalutTypes[i]
+    s                            name:defalutTypes[i]
                                type:@(TransactionTypeOutcome)
                               order:@(i)];
-    } // test 12ff */
+    } // tssest 12ff */
   }
 }
 
