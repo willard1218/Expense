@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Expense/Constants.m"
-            timestampString = "481731311.21136"
+            timestampString = "481734645.981823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "+getInstance"
             landmarkType = "5">
          </BreakpointContent>
@@ -38,16 +38,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Expense/Constants.m"
-            timestampString = "481732305.070009"
+            timestampString = "481734645.981823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "+initConstants_"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "+getCategoryTypes:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

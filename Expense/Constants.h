@@ -11,13 +11,8 @@
 // Diana love fegerg
 @interface Constants : NSObject
 
-typedef NS_ENUM(NSInteger, TransactionType) {
-    TransactionTypeNone = 0,
-    TransactionTypeIncome,
-    TransactionTypeOutcome,
-    TransactionTypeCount
-};
-+ (NSArray<NSString *> *)getCategoryType:(TransactionType)type;
+typedef NS_ENUM(NSInteger, TransactionType) { TransactionTypeNone = 0, TransactionTypeIncome, TransactionTypeOutcome, TransactionTypeCount };
++ (NSArray<NSString *> *)getCategoryTypes:(TransactionType)type;
 
 @property(readonly, nonatomic) NSArray<NSString *> *kCategoryOutcomeTypes;
 @property(readonly, nonatomic) NSArray<NSString *> *kCategoryIncomeTypes;

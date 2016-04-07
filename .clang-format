@@ -8,4 +8,4 @@ AllowShortFunctionsOnASingleLine : false
 AllowShortCaseLabelsOnASingleLine : false
 AllowShortLoopsOnASingleLine : false
 IndentCaseLabels: false
-ColumnLimit: 120
+ColumnLimit: 180

@@ -10,8 +10,6 @@
 
 @implementation Constants
 
-// static Constants *instance = nil;
-static NSArray<NSString *> *kCategoryOutComeTypes;
 static NSMutableArray *sCategoryTypes;
 + (Constants *)getInstance
 {
@@ -34,8 +32,7 @@ static NSMutableArray *sCategoryTypes;
 
 - (void)initConstants
 {
-    _kCategoryOutcomeTypes =
-        @[ @"Food", @"Clothing", @"Accommodation", @"Transportation", @"Education", @"Entertainment" ];
+    _kCategoryOutcomeTypes = @[ @"Food", @"Clothing", @"Accommodation", @"Transportation", @"Education", @"Entertainment" ];
 
     _kCategoryIncomeTypes = @[ @"Salary", @"ExtraIncome" ];
 
@@ -48,21 +45,14 @@ static NSMutableArray *sCategoryTypes;
 
 + (void)initConstants_
 {
-    kCategoryOutComeTypes =
-        @[ @"Food", @"Clothing", @"Accommodation", @"Transportation", @"Education", @"Entertainment" ];
     sCategoryTypes = [[NSMutableArray alloc] initWithCapacity:TransactionTypeCount];
-    [sCategoryTypes
-        insertObject:[NSArray<NSString *> arrayWithObjects:@"Food", @"Clothing", @"Accommodation", @"Transportation",
-                                                           @"Education", @"Entertainment", nil]
-             atIndex:0];
-    [sCategoryTypes insertObject:[NSArray<NSString *> arrayWithObjects:@"Salary", @"ExtraIncome", nil] atIndex:1];
-    /* sCategoryTypes[TransactionTypeIncome] =
-         @[ @"Food", @"Clothing", @"Accommodation", @"Transportation", @"Education", @"Entertainment" ];
-     sCategoryTypes[TransactionTypeOutcome] = @[ @"Salary", @"ExtraIncome" ];*/
-    // NSLog(@"%d %d", [sCategoryTypes[1] count], [sCategoryTypes[2] count]);
+    [sCategoryTypes insertObject:[NSArray<NSString *> arrayWithObjects:nil] atIndex:0];
+    [sCategoryTypes insertObject:[NSArray<NSString *> arrayWithObjects:@"Food", @"Clothing", @"Accommodation", @"Transportation", @"Education", @"Entertainment", nil]
+                         atIndex:TransactionTypeIncome];
+    [sCategoryTypes insertObject:[NSArray<NSString *> arrayWithObjects:@"Salary", @"ExtraIncome", nil] atIndex:TransactionTypeOutcome];
 }
 
-+ (NSArray<NSString *> *)getCategoryType:(TransactionType)type
++ (NSArray<NSString *> *)getCategoryTypes:(TransactionType)type
 {
     return sCategoryTypes[type];
 }

@@ -17,12 +17,11 @@
 
 - (void)setupDefalutCategory:(TransactionType)transaction_type
 {
-    Constants *constants = [Constants getInstance];
+    // Constants *constants = [Constants getInstance];
     NSArray *categoryList =
-        transaction_type == TransactionTypeIncome ? constants.kCategoryOutcomeTypes : constants.kCategoryIncomeTypes;
+        [Constants getCategoryTypes:transaction_type]; // transaction_type == TransactionTypeIncome ? constants.kCategoryOutcomeTypes : constants.kCategoryIncomeTypes;
 
-    NSPredicate *categorysPredicate =
-        [NSPredicate predicateWithFormat:@"categoryID < %d and type = %d", [categoryList count], transaction_type];
+    NSPredicate *categorysPredicate = [NSPredicate predicateWithFormat:@"categoryID < %d and type = %d", [categoryList count], transaction_type];
 
     NSArray *categorys = [Category MR_findAllWithPredicate:categorysPredicate];
 
@@ -39,10 +38,9 @@
     [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelError];
     [Constants initConstants_];
 
-    NSLog(@"%d %d", [[Constants getCategoryType:TransactionTypeIncome] count],
-          [[Constants getCategoryType:TransactionTypeOutcome] count]);
-    [self setupDefalutCategory:0];
-    [self setupDefalutCategory:1];
+    NSLog(@"%d %d", [[Constants getCategoryTypes:TransactionTypeIncome] count], [[Constants getCategoryTypes:TransactionTypeOutcome] count]);
+    [self setupDefalutCategory:TransactionTypeIncome];
+    [self setupDefalutCategory:TransactionTypeOutcome];
 
     // Override point for customization after application launch.
     return YES;
