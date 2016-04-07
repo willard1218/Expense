@@ -15,10 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SubCategory (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSNumber *categoryID;
-@property (nullable, nonatomic, retain) NSString *name;
-@property (nullable, nonatomic, retain) NSNumber *order;
-@property (nullable, nonatomic, retain) NSNumber *subCategory;
+@property(nullable, nonatomic, retain) NSNumber *categoryID;
+@property(nullable, nonatomic, retain) NSString *name;
+@property(nullable, nonatomic, retain) NSNumber *order;
+@property(nullable, nonatomic, retain) NSNumber *subCategory;
 
 @end
 

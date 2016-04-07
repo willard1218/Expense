@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-//Diana love fegerg
+// Diana love fegerg
 @interface Constants : NSObject
 
-
 typedef NS_ENUM(NSInteger, TransactionType) {
-  TransactionTypeNone = 0,
-  TransactionTypeIncome,
-  TransactionTypeOutcome,
-  TransactionTypeCount
+    TransactionTypeNone = 0,
+    TransactionTypeIncome,
+    TransactionTypeOutcome,
+    TransactionTypeCount
 };
++ (NSArray<NSString *> *)getCategoryType:(TransactionType)type;
 
 @property(readonly, nonatomic) NSArray<NSString *> *kCategoryOutcomeTypes;
 @property(readonly, nonatomic) NSArray<NSString *> *kCategoryIncomeTypes;
@@ -29,6 +29,5 @@ typedef NS_ENUM(NSInteger, TransactionType) {
 
 - (void)initConstants;
 + (Constants *)getInstance;
-
-
++ (void)initConstants_;
 @end
