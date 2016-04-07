@@ -12,17 +12,7 @@
 @interface Constants : NSObject
 
 typedef NS_ENUM(NSInteger, TransactionType) { TransactionTypeNone = 0, TransactionTypeIncome, TransactionTypeOutcome, TransactionTypeCount };
++ (void)initConstants;
++ (NSString *)getCategoryTypes;
 + (NSArray<NSString *> *)getCategoryTypes:(TransactionType)type;
-
-@property(readonly, nonatomic) NSArray<NSString *> *kCategoryOutcomeTypes;
-@property(readonly, nonatomic) NSArray<NSString *> *kCategoryIncomeTypes;
-@property(readonly, nonatomic) NSArray<NSString *> *kTransactionTypes;
-
-@property(readonly, nonatomic) NSNumber *kTransactionTypeIncome;
-@property(readonly, nonatomic) NSNumber *kTransactionTypeOutcome;
-@property(readonly, nonatomic) NSString *kDateTimeFormatPattern;
-
-- (void)initConstants;
-+ (Constants *)getInstance;
-+ (void)initConstants_;
 @end

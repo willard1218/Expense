@@ -11,49 +11,25 @@
 @implementation Constants
 
 static NSMutableArray *sCategoryTypes;
-+ (Constants *)getInstance
+static NSString *sDateTimeFormatPattern;
+
++ (void)initConstants
 {
-    /*@synchronized(self) {
-      if (!instance) {
-        instance = [[Constants alloc] init];
-        [instance initConstants];
-      }
-    }
-    return instance;*/
+    sDateTimeFormatPattern = @"yyyy-MM-dd HH:mm:ss";
 
-    static Constants *instance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-      instance = [[Constants alloc] init];
-      [instance initConstants];
-    });
-    return instance;
-}
-
-- (void)initConstants
-{
-    _kCategoryOutcomeTypes = @[ @"Food", @"Clothing", @"Accommodation", @"Transportation", @"Education", @"Entertainment" ];
-
-    _kCategoryIncomeTypes = @[ @"Salary", @"ExtraIncome" ];
-
-    _kTransactionTypes = @[ @"income", @"outcome" ];
-
-    _kDateTimeFormatPattern = @"yyyy-MM-dd HH:mm:ss";
-    _kTransactionTypeIncome = @1;
-    _kTransactionTypeOutcome = @2;
-}
-
-+ (void)initConstants_
-{
     sCategoryTypes = [[NSMutableArray alloc] initWithCapacity:TransactionTypeCount];
-    [sCategoryTypes insertObject:[NSArray<NSString *> arrayWithObjects:nil] atIndex:0];
-    [sCategoryTypes insertObject:[NSArray<NSString *> arrayWithObjects:@"Food", @"Clothing", @"Accommodation", @"Transportation", @"Education", @"Entertainment", nil]
-                         atIndex:TransactionTypeIncome];
-    [sCategoryTypes insertObject:[NSArray<NSString *> arrayWithObjects:@"Salary", @"ExtraIncome", nil] atIndex:TransactionTypeOutcome];
+    sCategoryTypes[TransactionTypeNone] = [NSNull null];
+    sCategoryTypes[TransactionTypeIncome] = @[ @"Food", @"Clothing", @"Accommodation", @"Transportation", @"Education", @"Entertainment" ];
+    sCategoryTypes[TransactionTypeOutcome] = @[ @"Salary", @"ExtraIncome" ];
 }
 
 + (NSArray<NSString *> *)getCategoryTypes:(TransactionType)type
 {
     return sCategoryTypes[type];
+}
+
++ (NSString *)getCategoryTypes
+{
+    return sDateTimeFormatPattern;
 }
 @end

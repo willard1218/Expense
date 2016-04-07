@@ -15,20 +15,18 @@
 
 @implementation AppDelegate
 
-- (void)setupDefalutCategory:(TransactionType)transaction_type
+- (void)setupDefalutCategory
 {
-    // Constants *constants = [Constants getInstance];
-    NSArray *categoryList =
-        [Constants getCategoryTypes:transaction_type]; // transaction_type == TransactionTypeIncome ? constants.kCategoryOutcomeTypes : constants.kCategoryIncomeTypes;
+    for (TransactionType type = TransactionTypeNone + 1; type < TransactionTypeCount; type++) {
+        NSArray *categoryList = [Constants getCategoryTypes:type];
+        NSPredicate *categorysPredicate = [NSPredicate predicateWithFormat:@"categoryID < %d and type = %d", [categoryList count], type];
+        NSArray *categorys = [Category MR_findAllWithPredicate:categorysPredicate];
 
-    NSPredicate *categorysPredicate = [NSPredicate predicateWithFormat:@"categoryID < %d and type = %d", [categoryList count], transaction_type];
-
-    NSArray *categorys = [Category MR_findAllWithPredicate:categorysPredicate];
-
-    if ([categorys count] == 0) {
-        [categoryList enumerateObjectsUsingBlock:^(NSString *categoryName, NSUInteger i, BOOL *_Nonnull stop) {
-          [Category createAndSaveEntity:@(i) name:categoryName type:@(transaction_type) order:@(i)];
-        }];
+        if ([categorys count] == 0) {
+            [categoryList enumerateObjectsUsingBlock:^(NSString *categoryName, NSUInteger i, BOOL *_Nonnull stop) {
+              [Category createAndSaveEntity:@(i) name:categoryName type:@(type) order:@(i)];
+            }];
+        }
     }
 }
 
@@ -36,11 +34,9 @@
 {
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Expense.sqlite"];
     [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelError];
-    [Constants initConstants_];
-
+    [Constants initConstants];
+    [self setupDefalutCategory];
     NSLog(@"%d %d", [[Constants getCategoryTypes:TransactionTypeIncome] count], [[Constants getCategoryTypes:TransactionTypeOutcome] count]);
-    [self setupDefalutCategory:TransactionTypeIncome];
-    [self setupDefalutCategory:TransactionTypeOutcome];
 
     // Override point for customization after application launch.
     return YES;
