@@ -13,7 +13,7 @@
 + (void)createAndSaveEntity:(NSNumber *)categoryID
                        name:(NSString *)name
                        type:(NSNumber *)type
-                      order:(NSNumber *)order + (void)
+                      order:(NSNumber *)order
         createAndSaveEntity:(NSNumber *)categoryID
                        name:(NSString *)name
             transactionType:(TransactionType)transactionType
