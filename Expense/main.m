@@ -9,21 +9,21 @@
 #import "AppDelegate.h"
 #import <UIKit/UIKit.h>
 
-int main(int argc, char *argv[]) {
-  //  @autoreleasepool {
-  //      return UIApplicationMain(argc, argv, nil,
-  //      NSStringFromClass([AppDelegate class]));
-  //  }
-  @autoreleasepool {
-    int retVal;
-    @try {
-      retVal = UIApplicationMain(argc, argv, nil,
-                                 NSStringFromClass([AppDelegate class]));
-    } @catch (NSException *exception) {
-      NSLog(@"%@", [exception callStackSymbols]); //< ★1
-      @throw exception;                           //< ★2
-    }
+int main(int argc, char *argv[])
+{
+    //  @autoreleasepool {
+    //      return UIApplicationMain(argc, argv, nil,
+    //      NSStringFromClass([AppDelegate class]));
+    //  }
+    @autoreleasepool {
+        int retVal;
+        @try {
+            retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        } @catch (NSException *exception) {
+            NSLog(@"%@", [exception callStackSymbols]); //< ★1
+            @throw exception;                           //< ★2
+        }
 
-    return retVal;
-  }
+        return retVal;
+    }
 }

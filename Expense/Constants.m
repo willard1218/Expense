@@ -19,7 +19,8 @@ static NSString *sDateTimeFormatPattern;
 
     sCategoryTypes = [[NSMutableArray alloc] initWithCapacity:TransactionTypeCount];
     sCategoryTypes[TransactionTypeNone] = [NSNull null];
-    sCategoryTypes[TransactionTypeIncome] = @[ @"Food", @"Clothing", @"Accommodation", @"Transportation", @"Education", @"Entertainment" ];
+    sCategoryTypes[TransactionTypeIncome] =
+        @[ @"Food", @"Clothing", @"Accommodation", @"Transportation", @"Education", @"Entertainment" ];
     sCategoryTypes[TransactionTypeOutcome] = @[ @"Salary", @"ExtraIncome" ];
 }
 

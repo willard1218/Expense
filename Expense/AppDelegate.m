@@ -19,7 +19,8 @@
 {
     for (TransactionType type = TransactionTypeNone + 1; type < TransactionTypeCount; type++) {
         NSArray *categoryList = [Constants getCategoryTypes:type];
-        NSPredicate *categorysPredicate = [NSPredicate predicateWithFormat:@"categoryID < %d and type = %d", [categoryList count], type];
+        NSPredicate *categorysPredicate =
+            [NSPredicate predicateWithFormat:@"categoryID < %d and type = %d", [categoryList count], type];
         NSArray *categorys = [Category MR_findAllWithPredicate:categorysPredicate];
 
         if ([categorys count] == 0) {
@@ -30,13 +31,30 @@
     }
 }
 
+- (NSArray *)loadFile:(NSString *)fn
+{
+    NSString *contents = [NSString stringWithContentsOfFile:fn encoding:NSUTF8StringEncoding error:nil];
+    NSArray *contentsArray = [contents componentsSeparatedByString:@"，"];
+    return contentsArray;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Expense.sqlite"];
     [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelError];
     [Constants initConstants];
     [self setupDefalutCategory];
-    NSLog(@"%d %d", [[Constants getCategoryTypes:TransactionTypeIncome] count], [[Constants getCategoryTypes:TransactionTypeOutcome] count]);
+    NSArray *contents = [self loadFile:@"/Users/Garrick/Documents/ios/Expense/testfile"];
+    NSLog(@"%d", [contents count]);
+    for (int i = 0; i < [contents count]; i++)
+        NSLog(@"%d.%@\n", i, contents[i]);
+
+    NSMutableString *s = @"abcd";
+    NSLog(@"%@ %p", s, s);
+    s = [NSMutableString stringWithString:@"3333"];
+    NSLog(@"%@ %p", s, s);
+    s = [NSMutableString stringWithFormat:@"%s", "1233"];
+    NSLog(@"%@ %p", s, s);
 
     // Override point for customization after application launch.
     return YES;

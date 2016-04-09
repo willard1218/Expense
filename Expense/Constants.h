@@ -11,7 +11,12 @@
 // Diana love fegerg
 @interface Constants : NSObject
 
-typedef NS_ENUM(NSInteger, TransactionType) { TransactionTypeNone = 0, TransactionTypeIncome, TransactionTypeOutcome, TransactionTypeCount };
+typedef NS_ENUM(NSInteger, TransactionType) {
+    TransactionTypeNone = 0,
+    TransactionTypeIncome,
+    TransactionTypeOutcome,
+    TransactionTypeCount
+};
 + (void)initConstants;
 + (NSString *)getCategoryTypes;
 + (NSArray<NSString *> *)getCategoryTypes:(TransactionType)type;
