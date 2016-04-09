@@ -25,7 +25,7 @@
 
         if ([categorys count] == 0) {
             [categoryList enumerateObjectsUsingBlock:^(NSString *categoryName, NSUInteger i, BOOL *_Nonnull stop) {
-              [Category createAndSaveEntity:@(i) name:categoryName type:@(type) order:@(i)];
+              [Category createAndSaveEntity:@(i) name:categoryName transactionType:type order:@(i)];
             }];
         }
     }

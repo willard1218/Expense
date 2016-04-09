@@ -10,12 +10,20 @@
 
 @implementation Category
 
-+ (void)createAndSaveEntity:(NSNumber *)categoryID name:(NSString *)name type:(NSNumber *)type order:(NSNumber *)order
++ (void)createAndSaveEntity:(NSNumber *)categoryID
+                       name:(NSString *)name
+                       type:(NSNumber *)type
+                      order:(NSNumber *)order + (void)
+        createAndSaveEntity:(NSNumber *)categoryID
+                       name:(NSString *)name
+            transactionType:(TransactionType)transactionType
+                      order:(NSNumber *)order
 {
     Category *category = [Category MR_createEntity];
     category.categoryID = categoryID;
     category.name = name;
     category.type = type;
+    category.type = @(transactionType);
     category.order = order;
     [category.managedObjectContext MR_saveToPersistentStoreAndWait];
 }
